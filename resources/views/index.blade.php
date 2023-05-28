@@ -117,37 +117,15 @@
                 </p>
 
                 <div class="row stats-row">
-                    <div class="stats-col text-center col-md-3 col-sm-6">
-                        <div class="circle">
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                                class="purecounter stats-no"></span>
-                            Klientlar
+                    @foreach ($abouts as $about)
+                        <div class="stats-col text-center col-md-3 col-sm-6 mb-5">
+                            <div class="circle">
+                                <span data-purecounter-start="0" data-purecounter-end="{{ $about->number }}"
+                                    data-purecounter-duration="1" class="purecounter stats-no"></span>
+                                {{ $about->name }}
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="stats-col text-center col-md-3 col-sm-6">
-                        <div class="circle">
-                            <span data-purecounter-start="0" data-purecounter-end="79" data-purecounter-duration="1"
-                                class="purecounter stats-no"></span>
-                            Hamkorlar
-                        </div>
-                    </div>
-
-                    <div class="stats-col text-center col-md-3 col-sm-6">
-                        <div class="circle">
-                            <span data-purecounter-start="0" data-purecounter-end="1463"
-                                data-purecounter-duration="1" class="purecounter stats-no"></span>
-                            Klientlar
-                        </div>
-                    </div>
-
-                    <div class="stats-col text-center col-md-3 col-sm-6">
-                        <div class="circle">
-                            <span data-purecounter-start="0" data-purecounter-end="68" data-purecounter-duration="1"
-                                class="purecounter stats-no"></span>
-                            Hamkorlar
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
@@ -194,7 +172,7 @@
                 <tbody>
                     @foreach ($posts as $post)
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row">{{ $post->id }}</th>
                             <td>{{ $post->ism }}</td>
                             <td>{{ $post->familya }}</td>
                             <td>{{ $post->lavozim }}</td>
@@ -238,29 +216,31 @@
 
                 <div class="row gy-4">
 
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="100">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="/assets/img/team-1.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    @foreach ($teams as $team)
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="member">
+                                <div class="member-img">
+                                    <img src="{{ asset('storage/' . $team->img) }}" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href=""><i class="bi bi-twitter"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $team->name }}</h4>
+                                    <span>{{ $team->lavozim }}</span>
+                                    <p>
+                                        {{ $team->about }}
+                                    </p>
                                 </div>
                             </div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut.
-                                    Ipsum
-                                    exercitationem iure minima enim corporis et voluptate.</p>
-                            </div>
                         </div>
-                    </div>
+                    @endforeach
 
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                    {{-- <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                         data-aos-delay="200">
                         <div class="member">
                             <div class="member-img">
@@ -324,7 +304,7 @@
                                     ut possimus ipsum officia.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
 

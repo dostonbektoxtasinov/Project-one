@@ -1,151 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project | login</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Project | Login</title>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="/assets/css/log_in.css">
 </head>
 
-<body>
+<body class='snippet-body'>
     <div class="container">
-        <h1>Please Login</h1>
-        <form action="{{ route('auth') }}" method="POST">
-            @csrf
-            <div class="form-control">
-                <input type="text" name="email" required>
-                <label>Email</label>
-                
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Kirish</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form action="{{ route('auth') }}" method="POST">
+                            @csrf
+                            <div class="form-group py-2">
+                                <div class="input-field">
+                                    <span class="far fa-user p-2"></span>
+                                    <input type="text" name="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group py-1 pb-2">
+                                <div class="input-field">
+                                    <span class="fas fa-lock px-2"></span>
+                                    <input type="password" name="password" placeholder="Password">
+                                    <button class="btn bg-white text-muted">
+                                        <span class="far fa-eye-slash"></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block mt-4">
+                                Kirish
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="form-control">
-                <input type="password" name="password" required>
-                <label>Password</label>
-                
-            </div>
-            <button class="btn" type="submit">
-                Login
-            </button>
-        </form>
-        
+        </div>
     </div>
-
-
-
-
+    <script type='text/javascript'></script>
 </body>
-<script>
-    const labels = document.querySelectorAll('.form-control label')
-
-    labels.forEach(label => {
-        label.innerHTML = label.innerText
-            .split('')
-            .map((letter, index) => `<span style="transition-delay:${index * 50}ms">${letter}</span>`)
-            .join('')
-    })
-</script>
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        background-color: steelblue;
-        color: #fff;
-        font-family: 'Muli', sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        overflow: hidden;
-        margin: 0;
-    }
-
-    .container {
-        background-color: rgba(0, 0, 0, 0.4);
-        padding: 20px 40px;
-        border-radius: 5px;
-    }
-
-    .container h1 {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .container a {
-        text-decoration: none;
-        color: lightblue;
-    }
-
-    .btn {
-        cursor: pointer;
-        display: inline-block;
-        width: 100%;
-        background: lightblue;
-        padding: 15px;
-        font-family: inherit;
-        font-size: 16px;
-        border: 0;
-        border-radius: 5px;
-    }
-
-    .btn:focus {
-        outline: 0;
-    }
-
-    .btn:active {
-        transform: scale(0.98);
-    }
-
-    .text {
-        margin-top: 30px;
-    }
-
-    .form-control {
-        position: relative;
-        margin: 20px 0 40px;
-        width: 300px;
-    }
-
-    .form-control input {
-        background-color: transparent;
-        border: 0;
-        border-bottom: 2px #fff solid;
-        display: block;
-        width: 100%;
-        padding: 15px 0;
-        font-size: 18px;
-        color: #fff;
-    }
-
-    .form-control input:focus,
-    .form-control input:valid {
-        outline: 0;
-        border-bottom-color: lightblue;
-    }
-
-    .form-control label {
-        position: absolute;
-        top: 15px;
-        left: 0;
-        pointer-events: none;
-    }
-
-    .form-control label span {
-        display: inline-block;
-        font-size: 18px;
-        min-width: 5px;
-        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-
-    .form-control input:focus+label span,
-    .form-control input:valid+label span {
-        color: lightblue;
-        transform: translateY(-30px);
-    }
-</style>
 
 </html>

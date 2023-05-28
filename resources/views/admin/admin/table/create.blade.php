@@ -1,8 +1,10 @@
-    <div class="container py-5" style="display: flex; justify-content: center;">
+@extends('Admin.layouts.main')
+
+@section('table')
+   <div class="container py-5" style="display: flex; justify-content: center;">
         <div class="col-lg-7 mb-5 mb-lg-0">
             <div class="contact-form">
-                <div id="success"></div>
-                <form action="{{ route('admin.store') }}" method="post">
+                <div id="succe" method="post">
                     @csrf
                     <div class="control-group mb-4">
                         <label for=""></label>
@@ -39,7 +41,7 @@
                         <button class="btn btn-primary py-3 px-5" type="submit">
                             Saqlash
                         </button>
-                        <a href="{{ route('admin') }}" class="btn btn-success py-3 px-5 float-right">
+                        <a href="{{ route('table.index') }}" class="btn btn-success py-3 px-5 float-right">
                             Ortga qaytish
                         </a>
                     </div>
@@ -48,3 +50,4 @@
         </div>
     </div>
 
+@endsection
