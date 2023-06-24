@@ -5,36 +5,37 @@
     <div class="col-lg-7 mb-5 mb-lg-0">
         <div class="contact-form">
             <div id="success"></div>
-            <form action="" method="post">
+            <form action="{{ route('table.update', ['table' => $table->id]) }}" method="post">
+                @method('PUT')
                 @csrf
                 <div class="control-group mb-4">
                     <label for=""></label>
-                    <input type="text" class="form-control p-4" name="ertalab" placeholder="Dars ertalab" />
-                    @error('Dars vaqti')
+                    <input type="text" class="form-control p-4" name="ism" placeholder="Ism" value="{{ $table->ism }}"/>
+                    @error('Ism')
                         <p class="help-block text-danger mt-4">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="control-group mb-4">
-                    <input type="text" class="form-control p-4" name="kech" placeholder="Dars kech" />
-                    @error('Dars vaqti')
+                    <input type="text" class="form-control p-4" name="familya" placeholder="Familya" value="{{ $table->familya }}"/>
+                    @error('Familya')
                         <p class="help-block text-danger mt-4">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="control-group mb-4">
-                    <input type="text" class="form-control p-4" name="lokatsiya" placeholder="Lokatsiya" />
-                    @error('Manzil')
+                    <input type="text" class="form-control p-4" name="lavozim" placeholder="Lavozim" value="{{ $table->lavozim }}"/>
+                    @error('Lavozim')
                         <p class="help-block text-danger mt-4">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="control-group mb-4">
-                    <input type="number" class="form-control p-4" name="nomer" placeholder="Telefon nomer" />
-                    @error('Nomer')
+                    <input type="text" class="form-control p-4" name="stavka" placeholder="Stavka"value="{{ $table->stavka }}" />
+                    @error('Stavka')
                         <p class="help-block text-danger mt-4">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="control-group mb-4">
-                    <input type="email" class="form-control p-4" name="email" placeholder="example@gmail.com" />
-                    @error('Email')
+                    <input type="number" class="form-control p-4" name="number" placeholder="Raqam" value="{{ $table->number }}"/>
+                    @error('number')
                         <p class="help-block text-danger mt-4">{{ $message }}</p>
                     @enderror
                 </div>

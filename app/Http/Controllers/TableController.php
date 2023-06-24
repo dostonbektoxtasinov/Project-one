@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TableRequest;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -22,9 +23,18 @@ class TableController extends Controller
     }
 
     
-    public function store(Request $request)
+    public function store(TableRequest $table)
     {
-        //
+        $table = Post::create([
+            'ism' => $table->ism,
+            'familya' => $table->familya,
+            'lavozim' => $table->lavozim,
+            'stavka' => $table->stavka,
+            'number' => $table->number,
+        ]);
+
+        
+        return redirect()->route('table.index');
     }
 
     

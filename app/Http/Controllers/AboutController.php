@@ -15,12 +15,10 @@ class AboutController extends Controller
 
         return view('admin.admin.about.index')->with('abouts', $abouts);
     }
-   
     public function create()
     {
         return view('admin.admin.about.create');
-    }
-   
+    }   
     public function store(AboutRequest $about)
     {
         $about = About::create([
@@ -31,18 +29,10 @@ class AboutController extends Controller
 
         return redirect()->route('about.index'); 
     }
-    
-    public function show(string $id)
-    {
-        
-    }
-  
     public function edit(About $about)
     {
         return view('admin.admin.about.edit')->with(['about' => $about]);
     }
-
-    
     public function update(AboutRequest $request, About $about)
     {
         $about->update([
@@ -53,8 +43,6 @@ class AboutController extends Controller
 
         return redirect()->route('about.index', ['About', $about->id]); 
     }
-
-    
     public function destroy(About $about)
     {
         $about->delete();

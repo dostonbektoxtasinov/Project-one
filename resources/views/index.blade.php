@@ -167,6 +167,11 @@
                         <th scope="col">8</th>
                         <th scope="col">9</th>
                         <th scope="col">10</th>
+                        <th scope="col">11</th>
+                        <th scope="col">12</th>
+                        <th scope="col">13</th>
+                        <th scope="col">14</th>
+                        <th scope="col">15</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -177,17 +182,21 @@
                             <td>{{ $post->familya }}</td>
                             <td>{{ $post->lavozim }}</td>
                             <td>{{ $post->stavka }}</td>
-                            <td>{{ $post->sana1 }}</td>
-                            <td>{{ $post->sana2 }}</td>
-                            <td>{{ $post->sana3 }}</td>
-                            <td>{{ $post->sana4 }}</td>
-                            <td>{{ $post->sana5 }}</td>
-                            <td>{{ $post->sana6 }}</td>
-                            <td>{{ $post->sana7 }}</td>
-                            <td>{{ $post->sana8 }}</td>
-                            <td>{{ $post->sana9 }}</td>
-                            <td>{{ $post->sana10 }}</td>
-
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
                         </tr>
                     @endforeach
 
@@ -239,75 +248,7 @@
                             </div>
                         </div>
                     @endforeach
-
-                    {{-- <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="/assets/img/team-2.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima
-                                    suscipit corporis.
-                                    Voluptate sed quas reiciendis animi neque sapiente.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="300">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="/assets/img/team-3.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt.
-                                    Voluptates enim aut
-                                    architecto porro aspernatur molestiae modi.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                        data-aos-delay="400">
-                        <div class="member">
-                            <div class="member-img">
-                                <img src="/assets/img/team-4.jpg" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut
-                                    aliquid doloremque
-                                    ut possimus ipsum officia.</p>
-                            </div>
-                        </div>
-                    </div> --}}
-
                 </div>
-
             </div>
 
         </section>

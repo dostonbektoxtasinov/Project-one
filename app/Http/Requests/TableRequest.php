@@ -11,7 +11,7 @@ class TableRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,11 @@ class TableRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'ism' => 'required',
+            'familya' => 'required',
+            'lavozim' => 'required',
+            'stavka' => 'required',
+            'number' => 'required',
         ];
     }
 }

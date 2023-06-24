@@ -31,33 +31,5 @@ class PostController extends Controller
         return view('admin.create');
     }
 
-   
-    public function store(Request $request)
-    {
-        // return view('admin.admin');
-    }
 
-   
-    public function show(string $id)
-    {
-        
-    }
-
-    
-    public function edit(string $id)
-    {
-        
-    }
-
-   
-    public function update(Request $request, string $id)
-    {
-        
-    }
-
-   
-    public function destroy(string $id)
-    {
-        
-    }
 }

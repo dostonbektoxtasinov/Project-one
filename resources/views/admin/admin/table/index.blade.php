@@ -35,6 +35,11 @@
                         <th scope="col">8</th>
                         <th scope="col">9</th>
                         <th scope="col">10</th>
+                        <th scope="col">11</th>
+                        <th scope="col">12</th>
+                        <th scope="col">13</th>
+                        <th scope="col">14</th>
+                        <th scope="col">15</th>
                         <th></th>
                         <th>
                             <a href="{{ route('table.create') }}" class="btn btn-danger">
@@ -51,7 +56,23 @@
                         <td>{{ $table->familya }}</td>
                         <td>{{ $table->lavozim }}</td>
                         <td>{{ $table->stavka }}</td>
-                        <td>{{ $table->sana1 }}</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        
+                        {{-- <td>{{ $table->sana1 }}</td>
                         <td>{{ $table->sana2 }}</td>
                         <td>{{ $table->sana3 }}</td>
                         <td>{{ $table->sana4 }}</td>
@@ -60,7 +81,7 @@
                         <td>{{ $table->sana7 }}</td>
                         <td>{{ $table->sana8 }}</td>
                         <td>{{ $table->sana9 }}</td>
-                        <td>{{ $table->sana10 }}</td>
+                        <td>{{ $table->sana10 }}</td> --}}
                         <td>
                             <a href="{{ route('table.edit', ['table' => $table->id]) }}" class="btn btn-success">
                                 Update
